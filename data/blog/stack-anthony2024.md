@@ -1,15 +1,12 @@
 ---
-title: stack-anthony2024
-date: 2023-11-18
+date: 2023-11-16
 tags:
   - holiday
   - canada
   - images
 draft: false
-layout: PostBanner
-images:
-  - /static/images/canada/mountains.jpg
-summary: this is for this page - this Anthony data-logging - sync with Obsidian
+summary: 'stack-anthony2024 and how we get there'
+images: ['/static/images/twitter-card.png']
 ---
 # mermaid.js
 mindmap
@@ -21,16 +18,9 @@ mindmap
 flowchart TD
 Start --> Stop
 
-
-
-
-
-
 YOYOYO
 
-[[stack-anthony2024]] even more changes and more nad more and more and moreflowchart TD
-Start --> Stop
-
+[[stack-anthony2024]] even more changes and more nad more and more and more
 ## Introduction
 
 Welcome to the release of Tailwind Nextjs Starter Blog template v2.0. This release is a major refactor of the codebase to support Nextjs App directory and React Server Components. Read on to discover the new features and how to migrate from V1.
@@ -72,12 +62,7 @@ Typescript is also a perfect match with our new type-safe markdown processor - C
 
 ## Contentlayer
 
-[Contentlayer](https://www.contentlayer.dev/) is a content SDK that validates and transforms your content into type-safe JSON data that you can easily import into your application. It makes working with local markdown or MDX files a breeze. This replaces `MDX-bundler` and our own markdown processing workflow.mindmap
-        Root
-            A
-              B
-              C
-
+[Contentlayer](https://www.contentlayer.dev/) is a content SDK that validates and transforms your content into type-safe JSON data that you can easily import into your application. It makes working with local markdown or MDX files a breeze. This replaces `MDX-bundler` and our own markdown processing workflow.
 
 First, a content source is defined, specifiying the name of the document type, the source where it is located along with the frontmatter fields and any additional computed fields that should be generated as part of the process.
 
