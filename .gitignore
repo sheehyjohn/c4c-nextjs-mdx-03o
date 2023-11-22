@@ -49,3 +49,5 @@ yarn-error.log*
 .vercel
 
 data/.obsidian/
+
+c4c-nextjs-mdx-03o/.obsidian/
