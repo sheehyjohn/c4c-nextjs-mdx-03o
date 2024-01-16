@@ -8,6 +8,19 @@ draft: false
 summary: 'stack-anthony2024 and how we get there'
 images: ['/static/images/twitter-card.png']
 ---
+# obsidianMobile 
+This is a change from Obsidian on A52
+
+# codeSandbox
+Follow this link as I don't want iframes - asdf
+ 
+
+![codeSandbox](/static/images/obsidian/Pasted-image-20231115172201.png)
+ 
+
+[Codesandbox - Breakout](https://codesandbox.io/embed/breakout-01-difficulty-iqx87?fontsize=14&hidenavigation=1&theme=dark)
+
+
 # mermaid.js
 mindmap
         Root
