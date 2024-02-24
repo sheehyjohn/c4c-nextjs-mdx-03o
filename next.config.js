@@ -13,7 +13,7 @@ const ContentSecurityPolicy = `
   media-src *.s3.amazonaws.com;
   connect-src *;
   font-src 'self';
-  frame-src giscus.app
+    giscus.app
 `
 
 const securityHeaders = [
@@ -30,7 +30,11 @@ const securityHeaders = [
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
   {
     key: 'X-Frame-Options',
-    value: 'DENY',
+    value: 'ALLOW',
+  },
+  {
+    key: 'i-Frame-Options',
+    value: 'ALLOW',
   },
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options
   {
@@ -54,6 +58,17 @@ const securityHeaders = [
   },
 ]
 
+
+const securityHeaders1 = [
+   
+  // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy
+  {
+    key: 'Permissions-Policy',
+    value: 'camera=(), microphone=(), geolocation=()',
+  },
+]
+
+
 /**
  * @type {import('next/dist/next-server/server/config').NextConfig}
  **/
@@ -72,7 +87,7 @@ module.exports = () => {
       return [
         {
           source: '/(.*)',
-          headers: securityHeaders,
+          headers: securityHeaders1,
         },
       ]
     },
