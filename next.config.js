@@ -30,7 +30,7 @@ const securityHeaders = [
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
   {
     key: 'Content-Security-Policy',    
-    value: ContentSecurityPolicyJS.replace(/\n/g, ''),
+    value: ContentSecurityPolicy.replace(/\n/g, ''),
 
   },
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
@@ -41,12 +41,8 @@ const securityHeaders = [
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
   {
     key: 'X-Frame-Options',
-    value: 'ALLOW',
-  },
-  {
-    key: 'i-Frame-Options',
-    value: 'ALLOW',
-  },
+    value: 'SAMEORIGIN',
+  }, 
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options
   {
     key: 'X-Content-Type-Options',
