@@ -8,19 +8,70 @@ draft: false
 summary: 'stack-anthony2024 and how we get there'
 images: ['/static/images/twitter-card.png']
 ---
-# mermaid.js
-mindmap
-        Root
-            A
-              B
-              C
+Here we go again .. on our own
 
-flowchart TD
-Start --> Stop
+
+<iframe
+  style={{
+    width: '100%',
+    height: 1450,
+    outline: '1px solid #252525',
+    border: 0,
+    borderRadius: 8,
+    marginBottom: 16,
+    zIndex: 100,
+  }}
+  src="https://codepen.io/sheehyjohn/pen/NWJZEQX"
+></iframe>
+
+
+
+<iframe
+  style={{
+    width: '100%',
+    height: 450,
+    outline: '1px solid #252525',
+    border: 0,
+    borderRadius: 8,
+    marginBottom: 16,
+    zIndex: 100,
+  }}
+  src="https://www.google.com"
+></iframe>
+
+
+ 
+
+# nextjs openai projects
+
+
+
+
+
+# obsidianMobile 
+This is a change from Obsidian on A52
+
+# codeSandbox
+Follow this link as I don't want iframes - asdf
+ 
+## TODO - iframe = allow to codesandbox
+![codeSandbox](/static/images/obsidian/Pasted-image-20231115172201.png)
+ 
+
+[Codesandbox - Breakout](https://codesandbox.io/embed/breakout-01-difficulty-iqx87?fontsize=14&hidenavigation=1&theme=dark)
+
+ 
+
+# gitHubMobile
+
+This is me editing and making changes from my mobile phone... Editing, Commuting and Pushing to Deploy with Github on Android A52
+
 
 YOYOYO
 
-[[stack-anthony2024]] even more changes and more nad more and more and more
+[[stack-anthony2024]] even more changes and more nad more and more and moreflowchart TD
+Start --> Stop
+
 ## Introduction
 
 Welcome to the release of Tailwind Nextjs Starter Blog template v2.0. This release is a major refactor of the codebase to support Nextjs App directory and React Server Components. Read on to discover the new features and how to migrate from V1.
@@ -30,6 +81,8 @@ Welcome to the release of Tailwind Nextjs Starter Blog template v2.0. This relea
 ## V1 to V2
 
 ![Github Traffic](/static/images/github-traffic.png)
+
+[prism themes](https://github.com/PrismJS/prism-themes)
 
 The template was first released in January 2021 and has since been used by thousands of users. It is featured on [Next.js Templates](https://vercel.com/templates/next.js/tailwind-css-starter-blog), [Tailwind Awesome](https://www.tailwindawesome.com/resources/tailwind-nextjs-starter-blog) among other listing sites. It attracts 200+ unique visitors daily notching 1500-2000 page views, with 1.3k forks and many other clones.
 
@@ -62,7 +115,12 @@ Typescript is also a perfect match with our new type-safe markdown processor - C
 
 ## Contentlayer
 
-[Contentlayer](https://www.contentlayer.dev/) is a content SDK that validates and transforms your content into type-safe JSON data that you can easily import into your application. It makes working with local markdown or MDX files a breeze. This replaces `MDX-bundler` and our own markdown processing workflow.
+[Contentlayer](https://www.contentlayer.dev/) is a content SDK that validates and transforms your content into type-safe JSON data that you can easily import into your application. It makes working with local markdown or MDX files a breeze. This replaces `MDX-bundler` and our own markdown processing workflow.mindmap
+        Root
+            A
+              B
+              C
+
 
 First, a content source is defined, specifiying the name of the document type, the source where it is located along with the frontmatter fields and any additional computed fields that should be generated as part of the process.
 
