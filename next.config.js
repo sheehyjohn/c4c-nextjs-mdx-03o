@@ -65,18 +65,7 @@ const securityHeaders = [
   },
 ]
 
-
-const securityHeaders1 = [
-   
-  // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy
-  {
-    
-      key: 'Content-Security-Policy',
-      value: "default-src 'self'; frame-src https://codepen.io; img-src 'self' https: data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:;",
-     
-  },
-]
-
+ 
 
 /**
  * @type {import('next/dist/next-server/server/config').NextConfig}
