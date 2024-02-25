@@ -13,14 +13,25 @@ const ContentSecurityPolicy = `
   media-src *.s3.amazonaws.com;
   connect-src *;
   font-src 'self';
-    giscus.app
+  frame-src giscus.app
 `
+
+
+const ContentSecurityPolicyJS =   `default-src 'self'; 
+                                  frame-src 'self' https://codepen.io; 
+                                  img-src 'self' 
+                                  https: data:; 
+                                  script-src 'self' 
+                                  'unsafe-inline' 
+                                  'unsafe-eval' 
+                                  https:; style-src 'self' 'unsafe-inline' https:'`
 
 const securityHeaders = [
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
   {
-    key: 'Content-Security-Policy',
-    value: ContentSecurityPolicy.replace(/\n/g, ''),
+    key: 'Content-Security-Policy',    
+    value: ContentSecurityPolicyJS.replace(/\n/g, ''),
+
   },
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
   {
@@ -63,8 +74,10 @@ const securityHeaders1 = [
    
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy
   {
-    key: 'Permissions-Policy',
-    value: 'camera=(), microphone=(), geolocation=()',
+    
+      key: 'Content-Security-Policy',
+      value: "default-src 'self'; frame-src https://codepen.io; img-src 'self' https: data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:;",
+     
   },
 ]
 
@@ -75,7 +88,7 @@ const securityHeaders1 = [
 module.exports = () => {
   const plugins = [withContentlayer, withBundleAnalyzer]
   return plugins.reduce((acc, next) => next(acc), {
-    reactStrictMode: true,
+    reactStrictMode: false,
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
     eslint: {
       dirs: ['app', 'components', 'layouts', 'scripts'],
@@ -87,7 +100,7 @@ module.exports = () => {
       return [
         {
           source: '/(.*)',
-          headers: securityHeaders1,
+          headers: securityHeaders,
         },
       ]
     },
