@@ -7,25 +7,16 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 // You might need to insert additional domains in script-src if you are using external services
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' codepen.io analytics.umami.is;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' codesandbox.io analytics.umami.is;
   style-src 'self' 'unsafe-inline';
   img-src * blob: data:;
   media-src *.s3.amazonaws.com;
   connect-src *;
   font-src 'self';
-  frame-src codepen.io
+  frame-src codesandbox.io
 `
 
-
-const ContentSecurityPolicyJS =   `default-src 'self'; 
-                                  frame-src 'self' https://codepen.io; 
-                                  img-src 'self' 
-                                  https: data:; 
-                                  script-src 'self' 
-                                  'unsafe-inline' 
-                                  'unsafe-eval' 
-                                  https:; style-src 'self' 'unsafe-inline' https:'`
-
+ 
 const securityHeaders = [
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
   {
